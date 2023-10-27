@@ -11,7 +11,7 @@ const handlePath = (dir) => {
 const storage = multer.diskStorage({
 	// 3.1 存储路径
 	destination: function(req, file, cb) {
-		cb(null, handlePath('../public/pictures'))
+		cb(null, handlePath('../../public/pictures'))
 	},
 	//  3.2 存储名称
 	filename: function (req, file, cb) {
