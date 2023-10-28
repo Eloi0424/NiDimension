@@ -15,6 +15,7 @@ mongoose.connect(url)
 const PictureSchema = new mongoose.Schema({
 	name: String,
 	url: String,
+	likes: Number,
 });
 PictureSchema.set('toJSON', {
 	transform: (document, returnedObject) => {

@@ -27,14 +27,15 @@ pictureRouter.post('/upload', uploadPicture.single('picture'),async (req, res) =
 	try {
 		const newPicture = new pictureModel({
 			name: req.body.name,
-			url : req.file.path
+			url : `http://localhost:3000/public/pictures/${req.file.filename}`,
+			likes: 0
 		});
 		await newPicture.save()
-		res.send('Image uploaded successfully.');
+		res.json(newPicture)
 	} catch (error) {
 		res.status(500).send(error.message);
 	}
-	// console.log(req)
+	// console.log(req.file)
 	// res.send('Image uploaded successfully.');
 })
 module.exports = pictureRouter;

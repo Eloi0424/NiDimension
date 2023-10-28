@@ -10,6 +10,8 @@ const fs = require('fs');
 
 const App = Express();
 
+
+App.use('/public/', Express.static('./public/'))
 App.use(Express.json())
 Morgan.token('data',(request)=>{
     return JSON.stringify(request.body)

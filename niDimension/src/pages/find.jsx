@@ -28,14 +28,6 @@ const Find = (props) => {
 					</List.Item>
 				)}
 			/>
-			{/*{props.pictures.map((picture) => {*/}
-			{/*  return (*/}
-			{/*    <div>*/}
-			{/*      <img src={picture.url} alt={picture.name} width = {'10%'}/>*/}
-			{/*      <p>{picture.description} {picture.likes}</p>*/}
-			{/*    </div>*/}
-			{/*  )*/}
-			{/*})}*/}
 		</>
 	)
 }
