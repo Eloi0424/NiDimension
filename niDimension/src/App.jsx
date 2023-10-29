@@ -3,6 +3,7 @@
 import Index from './pages/index.jsx'
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {createStore} from "redux";
 
 
 //  todos:
@@ -12,14 +13,7 @@ import axios from "axios";
 
 
 function App() {
-	const [pictures, setPictures] = useState([
-		{
-			"name": "blue",
-			"url": "http://localhost:3000/public/pictures/1698468840565.png",
-			"likes": 0,
-			"id": "653c93e82ce0d1fab94b02a5"
-		}
-  ])
+	const [pictures, setPictures] = useState([])
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 			axios.get('http://localhost:3000/api/pictures')
