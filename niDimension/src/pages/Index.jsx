@@ -1,7 +1,7 @@
 import { Layout, theme } from 'antd';
-import IndexHeader from '../components/indexHeader';
-import IndexContent from '../components/indexContent.jsx';
-import IndexFooter from '../components/indexFooter';
+import IndexHeader from '../components/IndexHeader.jsx';
+import IndexContent from '../components/IndexContent.jsx';
+import IndexFooter from '../components/IndexFooter.jsx';
 const Index = (props) => {
   const {
     token: { colorBgContainer },

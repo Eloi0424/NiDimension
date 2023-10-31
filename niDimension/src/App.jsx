@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 // import './App.css'
-import Index from './pages/index.jsx'
+import Index from './pages/Index.jsx'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {createStore} from "redux";

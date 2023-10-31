@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {Card, Image, Layout, List} from 'antd';
-import Find from "../pages/find.jsx";
-import Publish from "../pages/publish.jsx";
+import Find from "../pages/Find.jsx";
+import Publish from "../pages/Publish.jsx";
 import {useDispatch, useSelector} from "react-redux";
 
 const {Content} = Layout;
