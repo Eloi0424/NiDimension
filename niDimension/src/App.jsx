@@ -16,7 +16,7 @@ function App() {
 	const [pictures, setPictures] = useState([])
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
-			axios.get('http://localhost:3000/api/pictures')
+			axios.get('api/pictures')
 				.then(res => {
 					setPictures(res.data.data)
 					setLoading(false);

@@ -1,6 +1,8 @@
 import {Button, Image, Layout, Menu} from 'antd';
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import logoUrl from '../assets/icons/logo.jpg'
+
 
 const {Header} = Layout;
 
@@ -17,7 +19,7 @@ const IndexHeader = () => {
 					background: '#fff',
 				}}
 			>
-				<Image src='src\assets\icons\logo.jpg' preview={false} style={{width:100}}/>
+				<Image src={logoUrl} preview={false} style={{width:100}}/>
 				<Menu
 					theme="light"
 					mode="horizontal"

@@ -29,7 +29,7 @@ const PublishForm = () => {
 		const formData = new FormData()
 		formData.append('picture', fileList[0])
 		formData.append('name', name)
-		axios.post('http://localhost:3000/api/pictures/upload', formData).then(res => {
+		axios.post('api/pictures/upload', formData).then(res => {
 			console.log(res)
 			console.log('upload success')
 			setFileList([])
