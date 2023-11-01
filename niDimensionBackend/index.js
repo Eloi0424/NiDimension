@@ -6,7 +6,7 @@ const {join} = require("path");
 const {readFileSync} = require("fs");
 const path = require('path');
 const fs = require('fs');
-
+const config = require('./utils/config');
 
 const App = Express();
 
@@ -18,6 +18,7 @@ Morgan.token('data',(request)=>{
 })
 App.use(Morgan(':method :url :status :res[content-length] - :response-time ms :data'));
 App.use(Cors());
+App.use(Express.static('dist'))
 
 
 
@@ -29,7 +30,7 @@ App.use('/api/pictures', pictureRouter);
 
 
 
-App.listen(3000, () => {
-    console.log('Example app listening on port 3000!');
+App.listen(config.PORT, () => {
+    console.log(`Example app listening on port ${config.PORT}!`);
 })
 

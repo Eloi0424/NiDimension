@@ -27,7 +27,7 @@ pictureRouter.post('/upload', uploadPicture.single('picture'),async (req, res) =
 	try {
 		const newPicture = new pictureModel({
 			name: req.body.name,
-			url : `http://localhost:3000/public/pictures/${req.file.filename}`,
+			url : `/public/pictures/${req.file.filename}`,
 			likes: 0
 		});
 		await newPicture.save()
